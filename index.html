@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card javaScript</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <body>
+      <section>
+        <div class="card">
+          <div class="img-card"></div>
+          <h6>Laptop Gamer AMD</h6>
+          <p>Precio base: $<span class="precio-inicial">400000</span></p>
+
+          <p>
+            Cantidad:
+            <span class="cantidad">0</span>
+            <button
+              onclick="
+              //este suma la cantidad de clic que da en el boton sumar
+            const cantidad = document.querySelector('.cantidad');
+            let suma = Number(cantidad.innerHTML);
+            suma = suma + 1;
+            cantidad.innerHTML = suma;
+            
+            //esto es el incremento del valor total
+            const montoInicial = document.querySelector('.precio-inicial');
+            let montoTotal = document.querySelector('.valor-total');
+
+            let precioInicial = Number(montoInicial.innerHTML);
+            let incremento =  Number(montoTotal.innerHTML);
+            incremento = suma * precioInicial;
+            montoTotal.innerHTML = incremento;
+            "
+            >
+              +
+            </button>
+
+            <button
+              onclick="
+              //este suma la cantidad de clic que da en el boton sumar
+            let calculoRestar
+            const cantidad = document.querySelector('.cantidad');
+            let resta = Number(cantidad.innerHTML);
+            resta = resta - 1;
+            if(resta>=0){
+            cantidad.innerHTML = resta;
+            //esto es el decremento del valor total
+            const inicial = document.querySelector('.precio-inicial');
+            let total = document.querySelector('.valor-total');
+
+            let restaInicial = Number(inicial.innerHTML);
+            let decremento =  Number(total.innerHTML);
+            decremento = resta * restaInicial;
+            total.innerHTML = decremento;
+        }"
+            >
+              -
+            </button>
+          </p>
+        </div>
+      </section>
+
+      <div class="total-section">
+        <p>Total a pagar: $<span class="valor-total">0</span></p>
+      </div>
+    </body>
+  </body>
+</html>
